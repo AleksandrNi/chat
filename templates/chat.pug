@@ -1,0 +1,23 @@
+block append assets
+  script(src="/socket.io/socket.io.js")
+  script(src="/socketio.js")
+
+h1 Chat
+
+.alert.alert-info
+  | State:
+  span(data-status)
+
+ul.chat.messages
+form.submitMessageForm(action="/message" method="post")
+  input(type='hidden', name='_csrf', value=csrf)
+  p 
+    input(type="radio" name="room" value="public" onclick="myFunction(this.value)") 
+    |  Public  
+    input(type="radio" name="room" value="private" onclick="myFunction(this.value)") 
+    |  Private  
+
+  div.input-group
+    span.chatroom.input-group-addon
+    input#m(type="text" class="form-control" name="msg" placeholder="Type your message here" autocomplete="off")
+    button.btn.btn-primary(type="submit") Send

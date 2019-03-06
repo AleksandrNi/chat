@@ -1,0 +1,41 @@
+
+/* company colors */
+
+$primary: #ddd;
+$light: #fff;
+$dark: #333;
+$primary-light: #FFEED5;
+$secondary-light: #FDC149;
+$primary-mid: #DC664A;
+$primary-dark: #06888A;
+$secondary-dark: #5A3928;
+
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
+
+/* functionals variables */
+
+$page-background: $light;
+$page-background-black: $primary;
+$headline-color: $dark;
+
+$text-color: $dark;
+$text-color-light: $primary-mid;
+
+$border-light: $secondary-light; 
+
+$button-light: $secondary-light;
+$button-dark: $secondary-light;
+$border-dark: $primary-dark;
+$box-shadow: $shadow;
+
+
+/* fonts */
+
+$headline-font: 'Varela Round', Helvetica, Arial, sant-serif;
+$body-font: 'Palatino Linotype', Baskerville, serif;
+
+
+/* beauty */
+
+$border-radius: 5px;

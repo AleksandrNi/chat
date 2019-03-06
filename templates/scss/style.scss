@@ -1,0 +1,83 @@
+@import 'internal/_variable';
+@import 'internal/_mixins';	
+@import 'internal/_layout';
+
+
+html {
+	box-sizing: border-box;
+	font-family: $body-font;
+	color: $text-color;
+}
+
+body {
+	background: $page-background;
+	margin: 30px 50px;
+	line-height: 1.4;
+}
+
+.container {
+	max-width: 800px;
+}
+
+.btn {
+	background: $button-light;
+	color: $headline-color;
+	padding: 0.6rem 1rem;
+	text-decoration: none;
+	border:0;
+	border-radius: $border-radius; 
+
+	&:hover {
+		background: $text-color-light;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+
+.wrapper {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+
+.main-nav {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(430px, 1fr) );
+	grid-gap: 1rem;
+
+	div.ul-wrapper {
+	}
+
+	ul {
+		display: grid;
+		padding: 0;
+		list-style: none;
+		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr) );
+		grid-gap: 1rem;
+		margin-block-start: 0;
+    margin-block-end: 0;
+
+
+	}
+
+	a {
+		background: $button-light;
+		display: block;
+		text-decoration: none;
+		padding: 0.8rem;
+		text-align: center;
+		color: $headline-color;
+		text-transform: uppercase;
+		font-size: 1.1rem;
+
+	}
+	
+	a:hover {
+		background: $text-color-light;
+
+	}
+
+}

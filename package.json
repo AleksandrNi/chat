@@ -1,0 +1,35 @@
+{
+  "name": "chat",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksandrNi/chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksandrNi/chat/issues"
+  },
+  "homepage": "https://github.com/AleksandrNi/chat#readme",
+  "dependencies": {
+    "config": "^3.0.1",
+    "cookies": "^0.7.3",
+    "jstransformer-scss": "^1.0.0",
+    "juice": "^5.1.0",
+    "koa-csrf": "^3.0.7",
+    "koa-sass": "^2.0.0",
+    "nodemailer": "^5.1.1",
+    "nodemailer-html-to-text": "^3.0.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemailer-stub-transport": "^1.1.0",
+    "passport-facebook": "^3.0.0",
+    "passport-vkontakte": "^0.3.2",
+    "socket.io": "^2.2.0",
+    "socket.io-redis": "^5.2.0"
+  }
+}

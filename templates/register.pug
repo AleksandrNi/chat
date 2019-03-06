@@ -1,0 +1,28 @@
+extends layout
+
+block append assets
+  script(src="/script.js")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css")
+  link(rel="stylesheet" href="/style.css")
+
+block content
+  .container
+    include messages
+    form.register-form(action="/register" method="post")
+      h1 Please register
+
+      input(type='hidden', name='_csrf', value=csrf)
+
+      .form-group
+        label(for="email") Email
+        input.form-control(type="email" id="email" name="email" placeholder="my@mail.com" required autofocus)
+      .form-group
+        label(for="displayName") Display name
+        input.form-control(type="text" id="displayName" name="displayName" placeholder="Your beautiful name" required)
+      .form-group
+        label(for="password") Password
+        input.form-control(type="password" id="password" name="password" required)
+
+      button.btn.btn-lg.btn-primary.btn-block(type="submit") Register
+      br
+      a.btn.btn-lg.btn-primary.btn-block(href="/") Sign In

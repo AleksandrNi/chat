@@ -1,0 +1,63 @@
+extends layout
+
+block append assets
+	script(src="/internal-script.js")
+	link(rel="stylesheet" href="/style.css")
+	
+block content
+	.wrapper
+		section.top-conteiner
+			nav.main-nav
+				.ul-wrapper
+					ul
+						li.chat
+							a 
+								img.nav-image(src="/images/circle-24.png") 
+								| Chat
+						li.profile
+							a 
+								img.nav-image(src="/images/user-24.png") 
+								| Profile
+						li.search
+							a 
+								img.nav-image(src="/images/search-3-24.png") 
+								| Search
+						form(action="/logout" method="post")
+							input(type='hidden', name='_csrf', value=csrf)
+							button.logout(type="submit") 
+								img.nav-image(src="/images/arrow-24-24.png")
+								| Logout
+			header.showcase
+				h1 Products
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi in veniam architecto quod, dolore ex repellendus nobis eos error sunt illum sed pariatur eveniet sapiente vero non voluptates minima sequi?
+				a.btn Sth interesting
+
+			.top-box
+				div.alert-messages
+					include messages
+
+				.top-box-a
+					include chat
+
+
+				.top-box-a
+					h3 Profile UserName
+					a Logo
+					p Registration date
+					dib.inbox inbox messeges: SomeOne wants to be friend of Me
+						ul
+					div.outbox messeges were sent: People I want to be friends with
+						ul 
+					div.friends My Friends
+						ul
+					a.btn Buy Now									
+
+				.top-box-a
+					h3 Search UserName
+					form
+						input
+					ul.invite Invite new friends
+					ul.remove You are friends with
+					a.btn Buy Now
+
+		section
